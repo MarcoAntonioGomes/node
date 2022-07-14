@@ -1,1 +1,1 @@
-# node
+This is a Docker challenge of Full Cycle 3.0 course, https://plataforma.fullcycle.com.br/courses, solved by myself, that I needed to build a Node project using Docker and NGINX. The project is a simple API that save one name in the MYSQL database and use NGINX, like a reverse proxy to expose one route in localhost:8080 and print the names saved in database. 
