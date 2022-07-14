@@ -21,7 +21,7 @@ services:
 
   db:
     image: mysql:5.7
-    command: --innodb-use-native-aio=0
+    command: --innodb-use-native-aio=0 && mysql -uroot  -proot && CREATE DATABASE IF NOT EXISTS movies
     container_name: db
     restart: always
     tty: true

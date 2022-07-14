@@ -11,12 +11,16 @@ const config = {
 const mysql = require('mysql')
 const connection = mysql.createConnection(config)
 
+
+var sqlCreateTable = "CREATE TABLE IF NOT EXISTS people (id int  NOT NULL PRIMARY KEY AUTO_INCREMENT,  name VARCHAR(255))";
+connection.query(sqlCreateTable)
+
+
 const sql = `INSERT INTO people(name) values('Wesley')`
 connection.query(sql)
 
 
 const sqlNames = `SELECT name FROM people;`
-var names 
 var namesFormated = ''
 connection.query(sqlNames, function (error, results) {
     if (error) {
